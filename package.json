@@ -36,6 +36,9 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   },
+  "optionalDependencies": {
+    "@swc/core-darwin-x64": "^1.2.0"  
+  },
   "engines": {
     "node": ">=18.x",
     "npm": ">=7.x"

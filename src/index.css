@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent-cream: 249 249 241;
+    --color-accent-olive: 50 61 21;
+    --color-accent-red: 206 82 42;
+    --color-accent-yellow: 231 212 68;
+  }
+}

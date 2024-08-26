@@ -1,7 +1,7 @@
 import { SunIcon } from "@heroicons/react/20/solid";
-import type { Data } from "../../App";
 import { calculate } from "../../helpers/calculate";
 import { Button } from "../button";
+import type { Data } from "../calculator";
 
 interface ResultProps {
   data: Data;

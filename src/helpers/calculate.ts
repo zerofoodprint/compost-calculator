@@ -1,4 +1,4 @@
-import type { Data } from "../App";
+import type { Data } from "@/components/calculator";
 
 const defaultData: Data = {
   climate: "temperate", // can be "arid", "mediterranean", "temperate", or "nordic"

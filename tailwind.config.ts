@@ -18,7 +18,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['"Poppins"', ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
     },
   },

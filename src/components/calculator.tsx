@@ -1,15 +1,18 @@
+"use client";
+
 import { useState } from "react";
 
-import { Climate } from "./components/1-climate/climate";
-import { CurrentApplication } from "./components/2-current-application/current-application";
-import { CarbonNitrogen } from "./components/3-carbon-nitrogen";
-import { EstimatedApplication } from "./components/4-estimated-application";
-import { CarbonPercentage } from "./components/5-carbon-percentage";
-import { Result } from "./components/6-result";
-import { Navigation } from "./components/navigation";
-import type { CARBON_NITROGEN_OPTIONS } from "./helpers/carbon-nitrogen-options";
-import type { CLIMATE_OPTIONS } from "./helpers/climate-options";
-import type { CURRENT_APPLICATION_OPTIONS } from "./helpers/current-application-options";
+import clsx from "clsx";
+import type { CARBON_NITROGEN_OPTIONS } from "../helpers/carbon-nitrogen-options";
+import type { CLIMATE_OPTIONS } from "../helpers/climate-options";
+import type { CURRENT_APPLICATION_OPTIONS } from "../helpers/current-application-options";
+import { Climate } from "./1-climate/climate";
+import { CurrentApplication } from "./2-current-application/current-application";
+import { CarbonNitrogen } from "./3-carbon-nitrogen";
+import { EstimatedApplication } from "./4-estimated-application";
+import { CarbonPercentage } from "./5-carbon-percentage";
+import { Result } from "./6-result";
+import { Navigation } from "./navigation";
 
 export interface Data {
   carbonPercent: string;
@@ -29,7 +32,11 @@ const defaultData: Data = {
   zip: "",
 };
 
-function App() {
+interface CalculatorProps {
+  className?: string;
+}
+
+export function Calculator({ className }: CalculatorProps) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<Data>(defaultData);
 
@@ -56,7 +63,12 @@ function App() {
   };
 
   return (
-    <div className="flex w-full flex-col items-start rounded-3xl bg-green-950 px-16 py-14 text-left dark:bg-neutral-900">
+    <div
+      className={clsx(
+        "flex w-full flex-col items-start bg-green-950 px-16 py-14 text-left text-accent-cream dark:bg-neutral-900",
+        className,
+      )}
+    >
       {step !== 6 && (
         <>
           <h1 className="mb-12 text-left text-5xl font-semibold">
@@ -106,5 +118,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

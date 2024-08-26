@@ -126,7 +126,7 @@ export function Climate({ data, handleInputChange }: ClimateProps) {
                         },
                       }}
                     >
-                      <div className="flex flex-col gap-3 p-8">
+                      <div className="flex flex-col gap-3 p-8 text-accent-cream">
                         <div>
                           <label
                             className="block text-lg font-medium"
